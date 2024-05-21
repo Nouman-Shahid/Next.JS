@@ -4,10 +4,10 @@
 
 :root {
   --bg: #0d0c22;
-  --text: white;
+  /* --text: white; */
 }
 
 body {
   background-color: var(--bg);
-  color: var(--text);
+  /* color: var(--text); */
 }
