@@ -43,7 +43,7 @@ const navbar = () => {
         <div className="flex ">
           <Link href="/">
             <p className="font-mono text-[3vh] font-bold text-gray-300">
-              FullStack
+              EchoPages
             </p>
           </Link>
         </div>
@@ -54,7 +54,7 @@ const navbar = () => {
             <Link
               href={item.path}
               className={`py-1 px-3 rounded-[2vh] text-white ${
-                pathname === item.path && "bg-gray-100 text-gray-900 font-bold"
+                pathname === item.path && "bg-gray-100 text-gray-800 font-bold"
               }`}
             >
               {item.title}
@@ -70,8 +70,7 @@ const navbar = () => {
                 </Link>
               )}
               <button className="bg-red-700 py-1 px-3 text-white font-bold hover:scale-110 rounded-[1vh]">
-                {" "}
-                Logout{" "}
+                Logout
               </button>
             </>
           ) : (
@@ -105,7 +104,7 @@ const navbar = () => {
             <Link
               href={item.path}
               className={`py-1 px-3 rounded-[2vh] text-white flex items-center flex-col ${
-                pathname === item.path && "bg-gray-100 text-gray-900 font-bold"
+                pathname === item.path && "bg-gray-100 text-gray-800 font-bold"
               }`}
             >
               {item.title}

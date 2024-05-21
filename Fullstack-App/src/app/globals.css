@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --bg: #0d0c22;
   /* --text: white; */
 }
 
 body {
+  overflow-x: hidden;
   background-color: var(--bg);
   /* color: var(--text); */
 }
