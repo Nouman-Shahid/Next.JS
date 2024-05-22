@@ -10,7 +10,10 @@ const contact = () => {
         width={700}
         height={700}
       />
-      <div className="flex flex-col px-[4vh] justify-center space-y-6 ">
+      <form
+        action=""
+        className="flex flex-col px-[4vh] justify-center space-y-6 "
+      >
         <input
           type="text"
           name=""
@@ -43,7 +46,7 @@ const contact = () => {
         <button className="bg-blue-700 p-5 text-gray-200 font-bold  active:bg-blue-800 rounded-[0.5vh]">
           Submit
         </button>
-      </div>
+      </form>
     </main>
   );
 };
