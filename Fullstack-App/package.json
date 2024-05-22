@@ -13,6 +13,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
+    "react-spring": "^9.7.3",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

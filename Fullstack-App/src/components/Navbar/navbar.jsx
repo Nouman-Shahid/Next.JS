@@ -49,11 +49,11 @@ const navbar = () => {
         </div>
 
         {/* Links which are shown on screen > medium */}
-        <div className=" hidden  space-x-4 items-center px-2 md:flex">
+        <div className=" hidden  space-x-4 items-center px-2 md:flex  text-gray-200">
           {links.map((item) => (
             <Link
               href={item.path}
-              className={`py-1 px-3 rounded-[2vh] text-white ${
+              className={`py-1 px-3 rounded-[2vh] ${
                 pathname === item.path && "bg-gray-100 text-gray-800 font-bold"
               }`}
             >
@@ -69,12 +69,12 @@ const navbar = () => {
                   Admin
                 </Link>
               )}
-              <button className="bg-red-700 py-1 px-3 text-white font-bold hover:scale-110 rounded-[1vh]">
+              <button className="bg-red-700 py-1 px-3 text-white font-bold active:bg-red-800 rounded-[1vh]">
                 Logout
               </button>
             </>
           ) : (
-            <button className="bg-blue-700 py-1 px-3 text-gray-100 font-bold hover:scale-110 rounded-[1vh]">
+            <button className="bg-blue-700 py-1 px-3 text-gray-100 font-bold active:bg-blue-800 rounded-[1vh]">
               Login
             </button>
           )}
@@ -120,8 +120,7 @@ const navbar = () => {
                 </Link>
               )}
               <button className="bg-red-700 py-1 px-3 text-white font-bold hover:scale-110 rounded-[1vh]">
-                {" "}
-                Logout{" "}
+                Logout
               </button>
             </>
           ) : (
