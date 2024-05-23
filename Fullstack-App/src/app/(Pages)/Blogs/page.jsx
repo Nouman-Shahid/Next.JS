@@ -6,16 +6,19 @@ import { IoIosArrowForward } from "react-icons/io";
 const blog = () => {
   const blogs = [
     {
+      id: 1,
       src: "/image/blog-img/blog1.png",
       category: "Article",
       title: "10 interesting facts you need to hear....",
     },
     {
+      id: 2,
       src: "/image/blog-img/blog2.jpg",
       category: "Blog",
       title: "How to be calm in every situation....",
     },
     {
+      id: 3,
       src: "/image/blog-img/blog3.jpeg",
       category: "Blog",
       title: "Programming Languages 2024....",
@@ -39,7 +42,10 @@ const blog = () => {
         </div>
 
         {blogs.map((item) => (
-          <div className="flex flex-col w-[15vw] h-[40vh] space-y-4 rounded-[1vh] border border-blue-400 p-3">
+          <div
+            key={item.id}
+            className="flex flex-col w-[15vw] h-[40vh] space-y-4 rounded-[1vh] border border-blue-400 p-3"
+          >
             <Image
               src={item.src}
               alt="image"
