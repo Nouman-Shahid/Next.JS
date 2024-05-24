@@ -1,9 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { HiHeart } from "react-icons/hi";
 
 const posts = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  let handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   const icons = [
     {
       path: "/image/icons-img/fb.png",
@@ -44,11 +50,16 @@ const posts = () => {
             />
             <h1 className="text-gray-300 text-[2vh]">James Clear</h1>
           </div>
-          <h1 className="text-gray-300 text-[2vh]">July 2, 2020</h1>
+          <HiHeart
+            className={`size-[4vh] cursor-pointer ${
+              isClicked ? "text-red-500" : "text-gray-200"
+            }`}
+            onClick={handleClick}
+          />
         </div>
         <div className="flex text-white flex-col items-center text-center w-[55%] space-y-10">
           <h1 className="text-[5vh] font-bold">
-            Your most unhappy customers are your greatest source of learning.
+            How to be calm in every situation.
           </h1>
           <p className="text-[3vh] text-gray-300">
             Far far away, behind the word mountains, far from the countries ,
@@ -56,7 +67,7 @@ const posts = () => {
           </p>
         </div>
         <Image
-          src="/image/blog-img/blog1.png"
+          src="https://cdn.pixabay.com/photo/2019/10/29/10/07/man-4586576_640.jpg"
           alt="Image"
           width={1000}
           height={300}
@@ -117,7 +128,9 @@ const posts = () => {
             cum reiciendis tempore quo quisquam minima!
           </p>
 
-          <hr className="bg-gray-500 w-[95%] m-auto h-1 border-none" />
+          <h1 className="text-gray-400 text-[2vh] text-right underline">
+            Posted on : July 2, 2020
+          </h1>
         </div>
       </div>
     </main>

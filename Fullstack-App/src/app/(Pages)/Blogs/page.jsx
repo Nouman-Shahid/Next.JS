@@ -7,28 +7,28 @@ const blog = () => {
   const blogs = [
     {
       id: 1,
-      src: "/image/blog-img/blog1.png",
+      src: "https://cdn.pixabay.com/photo/2018/07/13/10/32/light-bulb-3535435_640.jpg",
       category: "Article",
-      title: "10 interesting facts you need to hear....",
+      title: "10 interesting facts you need to read....",
     },
     {
       id: 2,
-      src: "/image/blog-img/blog2.jpg",
+      src: "https://cdn.pixabay.com/photo/2019/10/29/10/07/man-4586576_640.jpg",
       category: "Blog",
       title: "How to be calm in every situation....",
     },
     {
       id: 3,
-      src: "/image/blog-img/blog3.jpeg",
-      category: "Blog",
-      title: "Programming Languages 2024....",
+      src: "https://cdn.pixabay.com/photo/2017/06/26/08/13/workspace-2443050_640.jpg",
+      category: "News",
+      title: "Programming Languages in (2024)....",
     },
   ];
 
   return (
-    <main className="flex flex-col  items-start w-screen h-screen p-14 lg:flex-row  ">
-      <div className="flex flex-wrap items-center space-x-24 space-y-10">
-        <div className="flex flex-col w-[25vh] space-y-4">
+    <main className="flex flex-col  items-start w-screen h-screen p-10 lg:flex-row  ">
+      <div className="flex flex-wrap items-center space-x-20 space-y-10">
+        <div className="flex flex-col w-[25vh] space-y-6">
           <h1 className="text-gray-200 text-[5vh] font-semibold ">
             Articles and blogs
           </h1>
@@ -36,7 +36,7 @@ const blog = () => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim culpa
             voluptatibus distinctio minus alias quas earum labore, error aliquam
           </h1>
-          <button className="text-gray-200 border border-gray-200 py-2 px-3 w-[45%] rounded-[1vh] flex items-center justify-between hover:bg-white hover:text-gray-800 transition duration-700 ">
+          <button className="text-gray-200 border border-gray-200 py-2 px-3 w-[60%] rounded-[1vh] flex items-center justify-between hover:bg-white hover:text-gray-800 transition duration-700 ">
             View all <IoIosArrowForward />
           </button>
         </div>
@@ -44,7 +44,7 @@ const blog = () => {
         {blogs.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col w-[15vw] h-[40vh] space-y-4 rounded-[1vh] border border-blue-400 p-3"
+            className="flex flex-col w-[15vw] h-[40vh] justify-between rounded-[1vh] border border-blue-400 p-3"
           >
             <Image
               src={item.src}
