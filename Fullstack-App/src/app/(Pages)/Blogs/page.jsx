@@ -55,7 +55,7 @@ const blog = () => {
             />
             <h1 className="text-gray-200 text-[2vh]">{item.category}</h1>
             <h1 className="text-gray-200 text-[2vh]">{item.title}</h1>
-            <Link href="/Blogs/post">
+            <Link href={`/Blogs/post${item.id}`}>
               <button className="text-gray-200 border text-[1.5vh] border-gray-200 py-2 px-3 w-[50%] rounded-[1vh] flex items-center justify-between hover:bg-white hover:text-gray-800 transition duration-700 ">
                 Read more <IoIosArrowForward />
               </button>

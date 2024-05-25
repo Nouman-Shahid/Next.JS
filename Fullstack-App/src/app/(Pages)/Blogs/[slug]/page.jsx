@@ -4,7 +4,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { HiHeart } from "react-icons/hi";
 
-const posts = () => {
+const posts = ({ params }) => {
+  console.log(params);
   const [isClicked, setIsClicked] = useState(false);
 
   let handleClick = () => {
