@@ -2,28 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { getPosts } from "@/app/Database/data";
 
-const blog = () => {
-  const blogs = [
-    {
-      id: 1,
-      src: "https://cdn.pixabay.com/photo/2018/07/13/10/32/light-bulb-3535435_640.jpg",
-      category: "Article",
-      title: "10 interesting facts you need to read....",
-    },
-    {
-      id: 2,
-      src: "https://cdn.pixabay.com/photo/2019/10/29/10/07/man-4586576_640.jpg",
-      category: "Blog",
-      title: "How to be calm in every situation....",
-    },
-    {
-      id: 3,
-      src: "https://cdn.pixabay.com/photo/2017/06/26/08/13/workspace-2443050_640.jpg",
-      category: "News",
-      title: "Programming Languages in (2024)....",
-    },
-  ];
+const blog = async () => {
+  const posts = await getPosts();
 
   return (
     <main className="flex flex-col  items-start w-screen h-screen p-10 lg:flex-row  ">
