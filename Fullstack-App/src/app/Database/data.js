@@ -8,7 +8,6 @@ export const getPosts = async () => {
     return posts;
   } catch (error) {
     console.log(error);
-    throw new Error("failed to fetch posts");
   }
 };
 export const getPost = async (slug) => {
