@@ -1,7 +1,8 @@
+import ProductsList from "@/components/ProductsList";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return <ProductsList />;
 };
 
 export default page;
