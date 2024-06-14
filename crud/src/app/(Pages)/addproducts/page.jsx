@@ -1,39 +1,13 @@
 "use client";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const page = () => {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
+  const router = useRouter();
 
-  const router = useRouter(); // Correctly initialize the router instance
-
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-    try {
-      const response = await fetch("/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name: productName }),
-      });
 
-      if (!response.ok) {
-        throw new Error(`Failed to create a Product: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      console.log("Product created:", data);
-
-      // Redirect or navigate using router.push
-      router.push("/success"); // Redirect to the success page or any other route
-    } catch (error) {
-      console.error("Error:", error);
-      // Display error to the user
-    }
+    router.push("/");
   }
   return (
     <>
@@ -45,34 +19,16 @@ const page = () => {
         >
           <input
             type="text"
-            placeholder="Product Name"
+            placeholder="Title"
             className="input input-bordered input-primary w-full max-w-xs"
-            onChange={(e) => setName(e.target.value)}
-            value={name}
+            //   onChange={(e) => setName(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="Image"
-            className="input input-bordered input-primary w-full max-w-xs"
-            onChange={(e) => setImage(e.target.value)}
-            value={image}
-          />
-          <input
-            type="number"
-            placeholder="1"
-            className="input input-bordered input-primary w-full max-w-xs"
-            onChange={(e) => setPrice(e.target.value)}
-            value={price}
-          />
-          <input
-            type="text"
-            placeholder="Product Category"
-            className="input input-bordered input-primary w-full max-w-xs"
-            onChange={(e) => setCategory(e.target.value)}
-            value={category}
-          />
+          <textarea
+            className="textarea textarea-primary w-full max-w-xs min-h-56"
+            placeholder="Description"
+          ></textarea>
           <button type="submit" className="btn btn-primary w-full max-w-xs">
-            Add Product
+            Add Post
           </button>
         </form>
       </div>
