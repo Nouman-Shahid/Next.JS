@@ -3,8 +3,8 @@ import React from "react";
 
 const ProductsList = () => {
   return (
-    <main className="flex flex-col">
-      <div className="flex justify-between items-center px-20  mt-20">
+    <main className="flex flex-col items-center w-screen ">
+      <div className="flex justify-between items-center px-20 w-full  mt-20">
         <p className="font-bold text-[2.5vh]">
           Nextjs-14 Crud Operations (Create, Read, Update, Delete) using
           AppWrite and Tailwind css
@@ -16,8 +16,8 @@ const ProductsList = () => {
         </Link>
       </div>
 
-      <div className="flex w-[90%]">
-        <div className="overflow-x-auto ">
+      <div className="flex w-full p-20">
+        <div className="overflow-x-auto w-[90%]">
           <table className="table">
             {/* head */}
             <thead>
@@ -40,22 +40,17 @@ const ProductsList = () => {
                   <div className="flex items-center gap-3">
                     <div className="avatar"></div>
                     <div>
-                      <div className="font-bold">Hart Hagerty</div>
-                      <div className="text-sm opacity-50">United States</div>
+                      <div className="font-bold">Test</div>
                     </div>
                   </div>
                 </td>
-                <td>
-                  Zemlak, Daniel and Leannon
-                  <br />
-                  <span className="badge badge-ghost badge-sm">
-                    Desktop Support Technician
-                  </span>
-                </td>
+                <td>Hello Worlds</td>
                 <td className="flex space-x-9">
-                  <button className="py-1 px-2 bg-slate-200 text-gray-800 font-bold rounded-[1vh]">
-                    Edit
-                  </button>{" "}
+                  <Link href={"/editproducts/dd"}>
+                    <button className="py-1 px-2 bg-slate-200 text-gray-800 font-bold rounded-[1vh]">
+                      Edit
+                    </button>
+                  </Link>
                   <button className="py-1 px-2 bg-red-500 text-gray-200 font-bold  rounded-[1vh]">
                     Delete
                   </button>
