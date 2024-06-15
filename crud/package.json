@@ -14,7 +14,8 @@
     "next": "14.2.3",
     "react": "^18",
     "react-daisyui": "^5.0.0",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-redux-loading-bar": "^5.0.8"
   },
   "devDependencies": {
     "@types/node": "20.14.2",
