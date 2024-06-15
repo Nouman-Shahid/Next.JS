@@ -68,11 +68,11 @@ const edit = ({ params }: { params: { id: string } }) => {
   };
 
   return (
-    <div>
+    <div className=" w-screen">
       <form
         onSubmit={handleSubmit}
         action=""
-        className="flex flex-col items-center space-y-6 h-[70vh] justify-center"
+        className="flex flex-col items-center space-y-6 w-full h-[70vh] justify-center "
       >
         <input
           type="text"
@@ -80,17 +80,17 @@ const edit = ({ params }: { params: { id: string } }) => {
           placeholder="Title"
           value={formData.title}
           onChange={handleInputData}
-          className="input input-bordered input-primary w-full max-w-xs"
+          className="input input-bordered input-primary w-[50vh]"
         />
         <textarea
           name="description"
-          className="textarea textarea-primary w-full max-w-xs min-h-56"
+          className="textarea textarea-primary w-[50vh] min-h-56"
           placeholder="Description"
           onChange={handleInputData}
           value={formData.description}
         ></textarea>
 
-        <button type="submit" className="btn btn-primary w-full max-w-xs">
+        <button type="submit" className="btn btn-primary w-[50vh]">
           {isLoading ? "Updating...." : "Update Data"}{" "}
         </button>
       </form>

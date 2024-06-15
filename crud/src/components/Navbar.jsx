@@ -2,9 +2,10 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1">
-        <a className="btn btn-ghost text-xl">CRUD Operations</a>
+    <div className="navbar bg-base-100 px-10">
+      <div className="flex-1 ">
+        <img src="images/icon.png" alt="" className="size-[3.5vh]" />
+        <a className="btn btn-ghost text-xl">Sticky Wall</a>
       </div>
       <div className="flex-none gap-2">
         <div className="form-control">
@@ -21,10 +22,7 @@ const Navbar = () => {
             className="btn btn-ghost btn-circle avatar"
           >
             <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
+              <img alt="Tailwind CSS Navbar component" src="images/user.png" />
             </div>
           </div>
           <ul

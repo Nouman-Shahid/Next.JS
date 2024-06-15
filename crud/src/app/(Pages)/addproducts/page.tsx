@@ -22,7 +22,7 @@ const page = () => {
 
     if (!formData.title || !formData.description) {
       setError("Please fill all the fields");
-      return; // Stop execution if fields are empty
+      return;
     }
 
     setError(null);
@@ -52,7 +52,7 @@ const page = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center  w-screen">
         <form
           onSubmit={handleSubmit}
           action=""
@@ -63,11 +63,11 @@ const page = () => {
             placeholder="Title"
             value={formData.title}
             name="title" // Added name attribute
-            className="input input-bordered input-primary w-full max-w-xs"
+            className="input input-bordered input-primary w-[50vh]"
             onChange={handleInputData}
           />
           <textarea
-            className="textarea textarea-primary w-full max-w-xs min-h-56"
+            className="textarea textarea-primary w-[50vh] min-h-56"
             placeholder="Description"
             value={formData.description}
             name="description" // Added name attribute
@@ -75,7 +75,7 @@ const page = () => {
           ></textarea>
           <button
             type="submit"
-            className="btn btn-primary w-full max-w-xs"
+            className="btn btn-primary w-[50vh]"
             disabled={isLoading}
           >
             {isLoading ? "Adding...." : "Add Data"}
